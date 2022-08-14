@@ -8,7 +8,7 @@ import java.sql.Statement;
 import javax.swing.table.DefaultTableModel;
 
 public class PrimeraConsulta {
-    public void primeraconsulta(DefaultTableModel modelo) throws ClassNotFoundException{
+    public void primeraconsulta(DefaultTableModel modelo1) throws ClassNotFoundException{
         Lider lider = new Lider();
         try{
             //Establecer la conexión a la Base de Datos
@@ -24,7 +24,7 @@ public class PrimeraConsulta {
                 lider.setPrimerApellido(result.getString(3));
                 lider.setCiudadResidencia(result.getString(4));
                 //Adicionar la información recibida de la BD (Tabla Lider a la Tabla o grilla
-                modelo.addRow(new Object[]{lider.getId_lider(), lider.getNombre(), lider.getPrimerApellido(), lider.getCiudadResidencia()});
+                modelo1.addRow(new Object[]{lider.getId_lider(), lider.getNombre(), lider.getPrimerApellido(), lider.getCiudadResidencia()});
             }
             //Cerrar instancias (Statement / ResultSet)
             result.close();

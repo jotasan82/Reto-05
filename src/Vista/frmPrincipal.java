@@ -1,7 +1,7 @@
 package Vista;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import Controlador.ControladorMain;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -12,6 +12,11 @@ public class frmPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form frmPrincipal
      */
+
+    DefaultTableModel modelo1 = new DefaultTableModel();
+    DefaultTableModel modelo2 = new DefaultTableModel();
+    DefaultTableModel modelo3 = new DefaultTableModel();
+
     public frmPrincipal() {
         initComponents();
     }
@@ -25,119 +30,228 @@ public class frmPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
-        btnPrimerInforme = new javax.swing.JButton();
-        btnSegundoInforme = new javax.swing.JButton();
-        btnTercerInforme = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        btnConsultarLider = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        btnConsultarProyecto = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        btnConsultarCompra = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MINISTERIO DE VIVIENDA");
 
-        btnPrimerInforme.setText("Primer Informe");
-        btnPrimerInforme.addActionListener(new java.awt.event.ActionListener() {
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setText("INFORMES MINISTERIO DE VIVIENDA");
+
+        btnConsultarLider.setText("Generar Informe");
+        btnConsultarLider.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPrimerInformeActionPerformed(evt);
+                btnConsultarLiderActionPerformed(evt);
             }
         });
 
-        btnSegundoInforme.setText("Segundo Informe");
-        btnSegundoInforme.addActionListener(new java.awt.event.ActionListener() {
+        jLabel2.setText("Informe de Lideres ");
+
+        jTable2.setModel(modelo1);
+        jScrollPane1.setViewportView(jTable2);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addComponent(btnConsultarLider)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(7, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(9, 9, 9)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(btnConsultarLider))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Informe Lideres", jPanel1);
+
+        jLabel3.setText("Informe de Proyectos");
+
+        btnConsultarProyecto.setText("Generar Informe");
+        btnConsultarProyecto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSegundoInformeActionPerformed(evt);
+                btnConsultarProyectoActionPerformed(evt);
             }
         });
 
-        btnTercerInforme.setText("Tercer Informe");
-        btnTercerInforme.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTercerInformeActionPerformed(evt);
-            }
-        });
+        jTable3.setModel(modelo2);
+        jScrollPane2.setViewportView(jTable3);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnPrimerInforme, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnSegundoInforme, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
-                    .addComponent(btnTercerInforme, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addComponent(btnConsultarProyecto)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(7, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(btnPrimerInforme)
-                .addGap(18, 18, 18)
-                .addComponent(btnSegundoInforme)
-                .addGap(18, 18, 18)
-                .addComponent(btnTercerInforme)
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(btnConsultarProyecto))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(9, Short.MAX_VALUE))
         );
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setText("INFORMES MINISTERIO DE VIVIENDA");
+        jTabbedPane1.addTab("Informe Proyecto", jPanel2);
+
+        jLabel4.setText("Informe de Compras en Homecenter");
+
+        btnConsultarCompra.setText("Generar Informe");
+        btnConsultarCompra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultarCompraActionPerformed(evt);
+            }
+        });
+
+        jTable1.setModel(modelo3);
+        jScrollPane3.setViewportView(jTable1);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addGap(18, 18, 18)
+                .addComponent(btnConsultarCompra)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 13, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(btnConsultarCompra))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(9, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Informe Compra", jPanel3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
                 .addGap(46, 46, 46)
                 .addComponent(jLabel1)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane1)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>                        
 
-    private void btnPrimerInformeActionPerformed(java.awt.event.ActionEvent evt) {                                                 
-        try {
-            new frmPrimerInforme().setVisible(true);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(frmPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }                                                
-
-    private void btnSegundoInformeActionPerformed(java.awt.event.ActionEvent evt) {                                                  
-        new frmSegundoInforme().setVisible(true);
+    private void btnConsultarLiderActionPerformed(java.awt.event.ActionEvent evt) {                                                  
+        modelo1.addColumn("ID_Lider");
+        modelo1.addColumn("Nombre");
+        modelo1.addColumn("Primer Apellido");
+        modelo1.addColumn("Ciudad Residencia");
+        jTable2.setModel(modelo1);
+        ControladorMain primeraConsulta = new ControladorMain();
+        primeraConsulta.informeLider(modelo1);
     }                                                 
 
-    private void btnTercerInformeActionPerformed(java.awt.event.ActionEvent evt) {                                                 
-        try {
-            new frmTercerInforme().setVisible(true);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(frmPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }                                                
+    private void btnConsultarProyectoActionPerformed(java.awt.event.ActionEvent evt) {                                                     
+        modelo2.addColumn("ID_Proyecto");
+        modelo2.addColumn("Constructora");
+        modelo2.addColumn("Numero Habitaciones");
+        modelo2.addColumn("Ciudad");
+        jTable3.setModel(modelo2);
+        ControladorMain segundaConsulta = new ControladorMain();
+        segundaConsulta.informeProyectos(modelo2);
+    }                                                    
+
+    private void btnConsultarCompraActionPerformed(java.awt.event.ActionEvent evt) {                                                   
+        modelo3.addColumn("ID_Compra");
+        modelo3.addColumn("Constructora");
+        modelo3.addColumn("Banco Vinculado");
+        jTable1.setModel(modelo3);
+        ControladorMain terceraConsulta = new ControladorMain();
+        terceraConsulta.informeCompras(modelo3);
+    }                                                  
 
     /**
      * @param args the command line arguments
      */
-   
-
+    
     // Variables declaration - do not modify                     
-    private javax.swing.JButton btnPrimerInforme;
-    private javax.swing.JButton btnSegundoInforme;
-    private javax.swing.JButton btnTercerInforme;
+    private javax.swing.JButton btnConsultarCompra;
+    private javax.swing.JButton btnConsultarLider;
+    private javax.swing.JButton btnConsultarProyecto;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    // End of variables declaration                   
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
+    // End of variables declaration
 }
